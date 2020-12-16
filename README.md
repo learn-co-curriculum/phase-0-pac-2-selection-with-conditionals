@@ -20,7 +20,7 @@ you pay the bill. This breaks down into a lot of conditional choices:
 - `if` it's the first of the month :arrow_right: pay the bill.
   - `else` :arrow_right: don't pay the bill.
 
-Writing code involves the same type of logic -- we only want an action to happen
+Writing code involves the same type of logic &mdash; we only want an action to happen
 _if_ a certain condition is met. In the programming world, this is called
 **control flow** because, it helps _control_ the _flow_ of an application.
 
@@ -33,27 +33,27 @@ values are expressions because they resolve to a value:
 
 ```js
 9;
-// => 9
+//=> 9
 
 ('Hello, world!');
-// => "Hello, world!"
+//=> "Hello, world!"
 
 false;
-// => false
+//=> false
 ```
 
 So are arithmetic and string operations. This code resolves to the number `64`:
 
 ```js
 8 * 8;
-// => 64
+//=> 64
 ```
 
 This resolves to the string `"Hello, world!"`:
 
 ```js
 'Hello, ' + 'world!';
-// => "Hello, world!"
+//=> "Hello, world!"
 ```
 
 Same for comparison and assignment operations. This comparison resolves to the
@@ -61,7 +61,7 @@ boolean `true`:
 
 ```js
 2 > 1;
-// => true
+//=> true
 ```
 
 Variable declarations are **NOT** expressions...
@@ -75,7 +75,7 @@ case):
 
 ```js
 answer = 42;
-// => 42
+//=> 42
 ```
 
 Finally, references to variables are also expressions, resolving to the value
@@ -85,7 +85,7 @@ contained in the variable:
 const fullName = 'Ada Lovelace';
 
 fullName;
-// => "Ada Lovelace"
+//=> "Ada Lovelace"
 ```
 
 ## Organize Code Using Block Statements
@@ -108,7 +108,7 @@ functions.
 
   const insideA = 'block statement.';
 }
-// => 20
+//=> 20
 ```
 
 Block statements return the value of the last evaluated expression inside the
@@ -144,34 +144,34 @@ boolean equivalent:
 
 ```js
 Boolean(false);
-// => false
+//=> false
 
 Boolean(null);
-// => false
+//=> false
 
 Boolean(undefined);
-// => false
+//=> false
 
 Boolean(0);
-// => false
+//=> false
 
 Boolean(NaN);
-// => false
+//=> false
 
 Boolean('');
-// => false
+//=> false
 
 Boolean(true);
-// => true
+//=> true
 
 Boolean(42);
-// => true
+//=> true
 
 Boolean('Hello, world!');
-// => true
+//=> true
 
 Boolean({ firstName: 'Brendan', lastName: 'Eich' });
-// => true
+//=> true
 ```
 
 **Note**: `document.all` is also falsy, but don't worry about too much
@@ -203,10 +203,10 @@ let isAdult;
 if (age >= 18) {
   isAdult = true;
 }
-// => true
+//=> true
 
 isAdult;
-// => true
+//=> true
 ```
 
 If the condition returns a **falsy** value, do nothing:
@@ -221,7 +221,7 @@ if (age >= 18) {
 }
 
 isAdult;
-// => undefined
+//=> undefined
 ```
 
 ### `else`
@@ -239,10 +239,10 @@ if (age >= 18) {
 } else {
   isAdult = false;
 }
-// => false
+//=> false
 
 isAdult;
-// => false
+//=> false
 ```
 
 ### Nested Conditionals
@@ -275,16 +275,16 @@ if (age >= 16) {
 }
 
 isAdult;
-// => undefined
+//=> undefined
 
 canWork;
-// => true
+//=> true
 
 canEnlist;
-// => undefined
+//=> undefined
 
 canDrink;
-// => undefined
+//=> undefined
 ```
 
 ### `else if`
@@ -308,19 +308,19 @@ if (age >= 21) {
 } else if (age >= 16) {
   canWork = true;
 }
-// => true
+//=> true
 
 isAdult;
-// => true
+//=> true
 
 canWork;
-// => true
+//=> true
 
 canEnlist;
-// => true
+//=> true
 
 canDrink;
-// => undefined
+//=> undefined
 ```
 
 As soon as one of the conditions returns a truthy value, the attached code
@@ -370,10 +370,10 @@ switch (hunger) {
     food = 'lasagna';
     break;
 }
-// => "lasagna"
+//=> "lasagna"
 
 food;
-// => "lasagna"
+//=> "lasagna"
 ```
 
 Generally, we use a `switch` statement if we need a conditional that hinges on
@@ -502,19 +502,19 @@ switch (true) {
   case age >= 16:
     canWork = true;
 }
-// => true
+//=> true
 
 isAdult;
-// => true
+//=> true
 
 canWork;
-// => true
+//=> true
 
 canEnlist;
-// => true
+//=> true
 
 canDrink;
-// => undefined
+//=> undefined
 ```
 
 We specified `true` as the value to `switch` on. All of our `case`s are
@@ -548,10 +548,10 @@ switch (mood) {
   default:
     response = "Sorry, I don't know how to respond to that mood.";
 }
-// => "Sorry, I don't know how to respond to that mood."
+//=> "Sorry, I don't know how to respond to that mood."
 
 response;
-// => "Sorry, I don't know how to respond to that mood."
+//=> "Sorry, I don't know how to respond to that mood."
 ```
 
 It's typically safer to include `break` statements because it helps avoid bugs
@@ -570,10 +570,10 @@ switch (mood) {
   default:
     response = "Sorry, I don't know how to respond to that mood.";
 }
-// => "Sorry, I don't know how to respond to that mood."
+//=> "Sorry, I don't know how to respond to that mood."
 
 response;
-// => "Sorry, I don't know how to respond to that mood."
+//=> "Sorry, I don't know how to respond to that mood."
 ```
 
 The `'happy'` case matches and assigns the string `'Heck yea; be happy!'` to
@@ -598,10 +598,10 @@ const age = 45;
 let isAdult;
 
 age >= 18 ? (isAdult = true) : (isAdult = false);
-// => true
+//=> true
 
 isAdult;
-// => true
+//=> true
 ```
 
 In the above example, we assign `isAdult` as `true` if the condition returns a
@@ -613,7 +613,7 @@ const age = 60;
 const isAdult = age >= 18 ? true : false;
 
 isAdult;
-// => true
+//=> true
 ```
 
 If it helps you visualize what's going on, you can wrap the condition, the
@@ -626,13 +626,13 @@ const canWork = age >= 16 ? (1 === 1) : (1 !== 1);
 const canEnlist = (isAdult ? true : false);
 
 isAdult;
-// => false
+//=> false
 
 canWork;
-// => true
+//=> true
 
 canEnlist;
-// => false
+//=> false
 ```
 
 **Top Tip:** Be careful to not overuse the ternary operator. It's fine for
