@@ -98,8 +98,10 @@ isAdult;
 //=> false
 ```
 
-Note that the `else` clause **does not take a condition** &mdash; we want its
-code block to run any time the condition for the `if` returns a falsey value.
+Note that the `else` clause **does not take a condition** &mdash; if the
+condition for the `if` returns a falsey value, we want the `else` code block to
+run **no matter what**. This means that exactly one of the code blocks will
+_always_ run.
 
 ### The Ternary Expression
 
@@ -169,13 +171,14 @@ sure the reduction in code is worth any potential reduction in readability.
 
 ### Nested Conditionals
 
-What if, instead of just deciding whether the passed-in `age` meets the criteria
-for `isAdult`, we want to add in some other examples of adulthood (in American
-society, at least): `canWork`, `canEnlist`, and `canDrink`. 16-year-olds can
-legally work; 18-year-olds can do what 16-year-olds can do **plus** they can
-enlist and they are legal adults; 21-year-olds can do what 16- and 18-year-olds
-can do **plus** they can drink (at the federally set minimum age). To handle
-this situation, we can employ nested conditional statements:
+What if, instead of just deciding whether the passed-in `age` meets the
+criterion for `isAdult`, we want to add in some other examples of adulthood (in
+American society, at least): `canWork`, `canEnlist`, and `canDrink`.
+16-year-olds can legally work; 18-year-olds can do what 16-year-olds can do
+**plus** they can enlist and they are legal adults; 21-year-olds can do what 16-
+and 18-year-olds can do **plus** they can drink (at the federally set minimum
+age). To handle this situation, one option is to use nested conditional
+statements:
 
 ```js
 const age = 17;
