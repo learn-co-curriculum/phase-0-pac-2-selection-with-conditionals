@@ -47,34 +47,10 @@ block_): one or more JavaScript expressions or statements enclosed in `{}`. The
 _code block_ contains the code we want to execute _if_ the condition returns a
 truthy value:
 
-```js
-const age = 30;
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/StormyColorlessArea?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-let isAdult;
-
-if (age >= 18) {
-  isAdult = true;
-}
-//=> true
-
-isAdult;
-//=> true
-```
-
-If the condition returns a **falsey** value, we do nothing:
-
-```js
-const age = 14;
-
-let isAdult;
-
-if (age >= 18) {
-  isAdult = true;
-}
-
-isAdult;
-//=> undefined
-```
+Try assigning different values to `age` and changing the conditional statement
+to see what happens.
 
 ### `else`
 
@@ -82,21 +58,7 @@ Often we want to run one block of code when the condition returns a `truthy`
 value and a _different_ block of code when it returns a `falsey` value. To do
 this, we use an `else` clause:
 
-```js
-const age = 14;
-
-let isAdult;
-
-if (age >= 18) {
-  isAdult = true;
-} else {
-  isAdult = false;
-}
-//=> false
-
-isAdult;
-//=> false
-```
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CarefulSteepDefinition?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Note that the `else` clause **does not take a condition** &mdash; if the
 condition for the `if` returns a falsey value, we want the `else` code block to
@@ -105,19 +67,10 @@ _always_ run.
 
 ### The Ternary Expression
 
-Recall that, in this situation, we can also use a ternary expression.
+Recall that this is the exact situation where we can use a ternary expression.
 Here's what the code above would look like using a ternary:
 
-```js
-const age = 45;
-let isAdult;
-
-age >= 18 ? (isAdult = true) : (isAdult = false);
-//=> true
-
-isAdult;
-//=> true
-```
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/ReadyOnerlookedArray?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the above example, we assign `isAdult` as `true` if the condition returns a
 truthy value and as `false` otherwise, exactly like the version using `if`.
@@ -135,7 +88,8 @@ isAdult;
 ```
 
 The ternary expression is evaluated and resolved to `false`, and that value is
-assigned to the variable `isAdult`.
+assigned to the variable `isAdult`. Try this version out in the REPL to verify
+that it works.
 
 **Advanced:** When the return values are `true` and `false` as in the example
 above, you actually don't need to use a ternary &mdash; or an `if...else` &mdash;
@@ -181,34 +135,7 @@ age). To handle this situation, one option is to use nested conditional
 statements:
 
 ```js
-const age = 17;
-
-let isAdult, canWork, canEnlist, canDrink;
-
-if (age >= 16) {
-  canWork = true;
-
-  if (age >= 18) {
-    isAdult = true;
-    canEnlist = true;
-
-    if (age >= 21) {
-      canDrink = true;
-    }
-  }
-}
-
-canWork;
-//=> true
-
-isAdult;
-//=> undefined
-
-canEnlist;
-//=> undefined
-
-canDrink;
-//=> undefined
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SerpentineOddInterpreter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 ```
 
 The first `if` condition checks for the "base level" of adulthood, and each
@@ -220,43 +147,16 @@ conditions because we know they have to be false as well. Otherwise JavaScript
 will keep checking each subsequent condition until it either comes to one that
 is false or finishes running all the code blocks.
 
+Try different values for `age` in the REPL and check the resulting values of the
+four variables.
+
 ### `else if`
 
 Another way to represent multiple possible conditions is with one or more `else
 if` clauses. Here the overlap is handled explicitly, by repeating the setting of
 the variables under each of the conditions in which they apply:
 
-```js
-const age = 20;
-
-let isAdult, canWork, canEnlist, canDrink;
-
-if (age >= 21) {
-  isAdult = true;
-  canWork = true;
-  canEnlist = true;
-  canDrink = true;
-} else if (age >= 18) {
-  isAdult = true;
-  canWork = true;
-  canEnlist = true;
-} else if (age >= 16) {
-  canWork = true;
-}
-//=> true
-
-isAdult;
-//=> true
-
-canWork;
-//=> true
-
-canEnlist;
-//=> true
-
-canDrink;
-//=> undefined
-```
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/AccomplishedEmbellishedCheckpoint?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 With this construction, unlike the nested construction, **at most one code block
 will be executed**. As soon as one of the conditions returns a truthy value, the
