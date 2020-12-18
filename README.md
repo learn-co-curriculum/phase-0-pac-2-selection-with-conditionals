@@ -50,7 +50,7 @@ truthy value:
 <iframe height="400px" width="100%" src="https://repl.it/@LizBurton/StormyColorlessArea?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the code above, age is initialized to 30, so the condition (`age >= 18`)
-resolves to `true`. The code in the code block executies, setting the `isAdult`
+resolves to `true`. The code in the code block executes, setting the `isAdult`
 variable to `true`. Try making some changes &mdash; assigning different values
 to `age`; changing the conditional statement &mdash; to see what happens.
 
@@ -164,9 +164,7 @@ of the four variables appear in more than one of the conditions. In this
 circumstance, we can streamline our code a bit by using nested conditional
 statements:
 
-```js
 <iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SerpentineOddInterpreter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-```
 
 The first `if` condition checks for the "base level" of adulthood (`age >= 16`),
 and each subsequent nested `if` "adds on." Note that each inner `if` statement
@@ -188,8 +186,7 @@ In this lesson, we've learned about one of the _selection statements_ that
 enable us to modify the _default sequence_: the `if` statement. In the simplest
 case, the `if` statement consists of the `if` clause, a condition, and a code
 block to run if the condition returns `true`. In more complex situations, we can
-add one or more `else if` clauses or an `else` clause. If you do use an `else`,
-it must come last.
+add one or more `else if` clauses or an `else` clause.
 
 In the next lesson, we'll learn about another selection statement we can use to
 create conditional code: the `switch` statement.
