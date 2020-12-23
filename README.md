@@ -17,12 +17,12 @@ learn more about **selection** statements, i.e., conditionals.
 **Conditional** statements enable us to execute code if a certain condition is
 true (or false). Some real-life examples might look like:
 
-* `if` hungry :arrow_right: make a meal.
-  * `else` :arrow_right: don't make a meal.
-* `if` light is green :arrow_right: press gas pedal.
-  * `else` :arrow_right: press brake pedal.
-* `if` it's the first of the month :arrow_right: pay the bill.
-  * `else` :arrow_right: don't pay the bill.
+* `if` hungry → make a meal.
+  * `else` → don't make a meal.
+* `if` light is green → press gas pedal.
+  * `else` → press brake pedal.
+* `if` it's the first of the month → pay the bill.
+  * `else` → don't pay the bill.
 
 You might also hear this referred to as **control flow** because it helps
 control the flow (i.e., sequence) of an application.
