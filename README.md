@@ -12,7 +12,7 @@ statements that will enable us to change the default sequence: **selection**
 statements and **repetition** statements. In this lesson and the next one, we'll
 learn more about **selection** statements, i.e., conditionals.
 
-![Seelection Image](https://curriculum-content.s3.amazonaws.com/programming-univbasics-2/sequence-and-comments/Selection_thick.png)
+![Seelection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
 **Conditional** statements enable us to execute code if a certain condition is
 true (or false). Some real-life examples might look like:
