@@ -121,12 +121,9 @@ ageMessage;
 //=> "Congratulations! You're an adult!"
 ```
 
-**Top Tip:** Be careful to not overuse the ternary expression. It's fine for
-slimming down a simple `if...else`, but be conscious of how easy your code is
-to understand for an outsider. Remember, you generally write code once, but it
-gets read (by yourself and others) **far** more than once. The ternary is often
-more difficult to quickly interpret than a regular old `if...else`, so make
-sure the reduction in code is worth any potential reduction in readability.
+> **Top Tip:** Be careful to not overuse the ternary expression. It's fine for slimming down a simple `if...else`, but be conscious of how easy your code is
+to understand for an outsider. Remember, you generally write code once, but it gets read (by yourself and others) **far** more than once. The ternary is often
+more difficult to quickly interpret than a regular old `if...else`, so make sure the reduction in code is worth any potential reduction in readability.
 
 ### `else if`
 
