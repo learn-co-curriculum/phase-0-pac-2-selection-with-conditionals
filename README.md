@@ -1,4 +1,4 @@
-# Selection with Conditionals: the 'if' Statement
+# Selection with Conditionals: the if Statement
 
 ## Learning Goals
 
