@@ -29,7 +29,7 @@ control the flow (i.e., sequence) of an application.
 
 JavaScript includes three structures for implementing code conditionally: _if
 statements_, _switch statements_, and _ternary expressions_. In this lesson, we
-will learn how to contruct `if` statements.
+will learn how to construct `if` statements.
 
 ## Learn to Use the `if` Statement
 
