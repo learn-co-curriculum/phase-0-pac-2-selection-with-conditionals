@@ -51,8 +51,8 @@ truthy value:
 
 In the code above, age is initialized to 30, so the condition (`age >= 18`)
 resolves to `true`. The code in the code block executes, setting the `isAdult`
-variable to `true`. Try making some changes &mdash; assigning different values
-to `age`; changing the conditional statement &mdash; to see what happens.
+variable to `true`. Try making some changes — assigning different values
+to `age`; changing the conditional statement — to see what happens.
 
 ### `else`
 
@@ -62,7 +62,7 @@ this, we use an `else` clause:
 
 <iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CarefulSteepDefinition?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Note that the `else` clause **does not take a condition** &mdash; if the
+Note that the `else` clause **does not take a condition** — if the
 condition for the `if` returns a falsey value, we want the `else` code block to
 run **no matter what**. This means that exactly one of the code blocks will
 _always_ run.
@@ -77,7 +77,7 @@ Here's what the code above would look like using a ternary:
 Here, we assign `isAdult` as `true` if the condition returns a truthy value and
 as `false` otherwise, exactly like the version using `if`.
 
-Remember that a ternary is an _expression_ &mdash; it returns a _value_. What
+Remember that a ternary is an _expression_ — it returns a _value_. What
 this means is that we can simplify the code above a bit and assign the _result_ of
 the ternary directly to a variable:
 
@@ -97,7 +97,7 @@ that it works.
 conditional code returns `true`, return `true`, and when the conditional code
 returns `false`, return `false`." Sounds a bit redundant, doesn't it? When the
 return values are `true` and `false` as in the example above, you actually don't
-need to use a ternary &mdash; or an `if...else` &mdash; at all! This is because
+need to use a ternary — or an `if...else` — at all! This is because
 ***the conditional is an expression as well***. The return value of `age >= 18`
 is a _Boolean value_ (`true` or `false`), so it can be assigned directly to our
 `isAdult` variable:
@@ -167,7 +167,7 @@ The first `if` condition checks for the "base level" of adulthood (`age >= 16`),
 and each subsequent nested `if` "adds on." Note that each inner `if` statement
 is nested **inside** the code block of the one before. This means that the inner
 `if` statements will only execute if the outer ones are truthy. This makes
-sense: if age is less than 16, we're done &mdash; there's no need to check the
+sense: if age is less than 16, we're done — there's no need to check the
 remaining conditions because we know they have to be false as well. Otherwise
 JavaScript will keep checking each subsequent condition until it either comes to
 one that is false or finishes running all the code blocks.
