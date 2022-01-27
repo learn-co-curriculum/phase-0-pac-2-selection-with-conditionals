@@ -12,7 +12,7 @@ statements that will enable us to change the default sequence: **selection**
 statements and **repetition** statements. In this lesson and the next one, we'll
 learn more about **selection** statements, i.e., conditionals.
 
-![Seelection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
+![Selection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
 **Conditional** statements enable us to execute code if a certain condition is
 true (or false). Some real-life examples might look like:
@@ -47,7 +47,19 @@ block_): one or more JavaScript expressions or statements enclosed in `{}`. The
 _code block_ contains the code we want to execute _if_ the condition returns a
 truthy value:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/StormyColorlessArea?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+  const age = 30;
+
+  let isAdult;
+
+  if (age >= 18) {
+    isAdult = true;
+  }
+
+  isAdult;
+```
+
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/StormyColorlessArea?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the code above, age is initialized to 30, so the condition (`age >= 18`)
 resolves to `true`. The code in the code block executes, setting the `isAdult`
@@ -58,10 +70,21 @@ to `age`; changing the conditional statement — to see what happens.
 
 Often we want to run one block of code when the condition returns a `truthy`
 value and a _different_ block of code when it returns a `falsey` value. To do
-this, we use an `else` clause:
+this, we use an `else` clause. Change your code so it looks like this:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CarefulSteepDefinition?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+  const age = 14;
 
+  let isAdult;
+
+  if (age >= 18) {
+    isAdult = true;
+  } else {
+    isAdult = false;
+  }
+
+  isAdult;
+```
 Note that the `else` clause **does not take a condition** — if the
 condition for the `if` returns a falsey value, we want the `else` code block to
 run **no matter what**. This means that exactly one of the code blocks will
@@ -72,7 +95,15 @@ _always_ run.
 Recall that this is the exact situation where we can use a ternary expression.
 Here's what the code above would look like using a ternary:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/ReadyOnerlookedArray?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+  const age = 14;
+
+  let isAdult;
+
+  age >= 18 ? (isAdult = true) : (isAdult = false);
+
+  isAdult;
+```
 
 Here, we assign `isAdult` as `true` if the condition returns a truthy value and
 as `false` otherwise, exactly like the version using `if`.
@@ -142,7 +173,31 @@ age).
 
 Here's how we can handle that using `else if` clauses:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/AccomplishedEmbellishedCheckpoint?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+  const age = 20;
+
+  let isAdult, canWork, canEnlist, canDrink;
+
+  if (age >= 21) {
+    canWork = true;
+    canEnlist = true;
+    isAdult = true;
+    canDrink = true;
+  } else if (age >= 18) {
+    canWork = true;
+    canEnlist = true;
+    isAdult = true;
+  } else if (age >= 16) {
+    canWork = true;
+  }
+
+  canWork;
+  //canEnlist;
+  //isAdult;
+  //canDrink;
+```
+
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/AccomplishedEmbellishedCheckpoint?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Any time you use an `if...else if` construction, **at most one code block will
 be executed**. As soon as one of the conditions returns a truthy value, the
@@ -161,7 +216,28 @@ of the four variables appear in more than one of the conditions. In this
 circumstance, we can streamline our code a bit by using nested conditional
 statements:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SerpentineOddInterpreter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+```js
+  const age = 17;
+
+  let isAdult, canWork, canEnlist, canDrink;
+
+  if (age >= 16) {
+    canWork = true;
+
+    if (age >= 18) {
+      isAdult = true;
+      canEnlist = true;
+
+      if (age >= 21) {
+        canDrink = true;
+      }
+    }
+  }
+
+  canWork;
+```
+
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SerpentineOddInterpreter?lite=true&outputonly=1" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The first `if` condition checks for the "base level" of adulthood (`age >= 16`),
 and each subsequent nested `if` "adds on." Note that each inner `if` statement
