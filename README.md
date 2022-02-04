@@ -31,6 +31,22 @@ JavaScript includes three structures for implementing code conditionally: _if
 statements_, _switch statements_, and _ternary expressions_. In this lesson, we
 will learn how to construct `if` statements.
 
+### Note about the Embedded REPL's in this Lesson
+
+You'll notice that the embedded REPL's in this lesson look a little different
+from the ones you've seen in previous lessons. They include both a code window
+on the top, and the console window on the bottom. Code is pre-written in the
+code window so you just need to click the "Run" button to see what it does.
+
+Given that some of the code snippets are too long to fit in the code window and
+require scrollilng to see everything, you might want to open the REPL in the
+browser. You can do this by clicking "open in replit" in the upper right corner
+of the embedded REPL window.
+
+Once it's open in the browser, you can copy it to your own account and
+experiment with the code. To do this, click the "Fork repl" button in the upper
+right corner of the page. You will need to be logged in.
+
 ## Learn to Use the `if` Statement
 
 To write a basic `if` statement, we use the following structure:
@@ -47,7 +63,7 @@ block_): one or more JavaScript expressions or statements enclosed in `{}`. The
 _code block_ contains the code we want to execute _if_ the condition returns a
 truthy value:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/StormyColorlessArea?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/FixedUnacceptableCable?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the code above, age is initialized to 30, so the condition (`age >= 18`)
 resolves to `true`. The code in the code block executes, setting the `isAdult`
@@ -60,19 +76,18 @@ Often we want to run one block of code when the condition returns a `truthy`
 value and a _different_ block of code when it returns a `falsey` value. To do
 this, we use an `else` clause:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CarefulSteepDefinition?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CourteousEquatorialTree?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
-Note that the `else` clause **does not take a condition** — if the
-condition for the `if` returns a falsey value, we want the `else` code block to
-run **no matter what**. This means that exactly one of the code blocks will
-_always_ run.
+Note that the `else` clause **does not take a condition** — if the condition for
+the `if` returns a falsey value, we want the `else` code block to run **no
+matter what**. This means that exactly one of the code blocks will _always_ run.
 
 ### The Ternary Expression
 
 Recall that this is the exact situation where we can use a ternary expression.
 Here's what the code above would look like using a ternary:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/ReadyOnerlookedArray?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/EnchantedAchingProcedurallanguage?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Here, we assign `isAdult` as `true` if the condition returns a truthy value and
 as `false` otherwise, exactly like the version using `if`.
@@ -142,7 +157,7 @@ age).
 
 Here's how we can handle that using `else if` clauses:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/AccomplishedEmbellishedCheckpoint?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SuburbanScentedAccounting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Any time you use an `if...else if` construction, **at most one code block will
 be executed**. As soon as one of the conditions returns a truthy value, the
@@ -161,7 +176,7 @@ of the four variables appear in more than one of the conditions. In this
 circumstance, we can streamline our code a bit by using nested conditional
 statements:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SerpentineOddInterpreter?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/MutedUntrueAdware?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The first `if` condition checks for the "base level" of adulthood (`age >= 16`),
 and each subsequent nested `if` "adds on." Note that each inner `if` statement
