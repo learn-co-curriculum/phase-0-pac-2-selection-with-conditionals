@@ -12,7 +12,7 @@ statements that will enable us to change the default sequence: **selection**
 statements and **repetition** statements. In this lesson and the next one, we'll
 learn more about **selection** statements, i.e., conditionals.
 
-![Seelection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
+![Selection Image](https://curriculum-content.s3.amazonaws.com/phase-0/pac-2-intro/Selection_thick.png)
 
 **Conditional** statements enable us to execute code if a certain condition is
 true (or false). Some real-life examples might look like:
@@ -38,14 +38,9 @@ from the ones you've seen in previous lessons. They include both a code window
 on the top, and the console window on the bottom. Code is pre-written in the
 code window so you just need to click the "Run" button to see what it does.
 
-Given that some of the code snippets are too long to fit in the code window and
-require scrollilng to see everything, you might want to open the REPL in the
-browser. You can do this by clicking "open in replit" in the upper right corner
-of the embedded REPL window.
-
-Once it's open in the browser, you can copy it to your own account and
-experiment with the code. To do this, click the "Fork repl" button in the upper
-right corner of the page. You will need to be logged in.
+However, if you want to experiment with any of the code (which we strongly
+recommend), you'll need to open [replit][] in the browser and copy/paste the
+code there.
 
 ## Learn to Use the `if` Statement
 
@@ -63,12 +58,13 @@ block_): one or more JavaScript expressions or statements enclosed in `{}`. The
 _code block_ contains the code we want to execute _if_ the condition returns a
 truthy value:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/FixedUnacceptableCable?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/FixedUnacceptableCable?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the code above, age is initialized to 30, so the condition (`age >= 18`)
 resolves to `true`. The code in the code block executes, setting the `isAdult`
-variable to `true`. Try making some changes — assigning different values
-to `age`; changing the conditional statement — to see what happens.
+variable to `true`. Open [replit][] and try making some changes (e.g., assigning
+different values to `age`; changing the conditional statement) to see what
+happens.
 
 ### `else`
 
@@ -76,7 +72,7 @@ Often we want to run one block of code when the condition returns a `truthy`
 value and a _different_ block of code when it returns a `falsey` value. To do
 this, we use an `else` clause:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/CourteousEquatorialTree?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/CourteousEquatorialTree?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Note that the `else` clause **does not take a condition** — if the condition for
 the `if` returns a falsey value, we want the `else` code block to run **no
@@ -87,7 +83,7 @@ matter what**. This means that exactly one of the code blocks will _always_ run.
 Recall that this is the exact situation where we can use a ternary expression.
 Here's what the code above would look like using a ternary:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/EnchantedAchingProcedurallanguage?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/EnchantedAchingProcedurallanguage?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Here, we assign `isAdult` as `true` if the condition returns a truthy value and
 as `false` otherwise, exactly like the version using `if`.
@@ -105,7 +101,7 @@ isAdult;
 ```
 
 The ternary expression is evaluated and resolved to `true`, and that value is
-assigned to the variable `isAdult`. Try this version out in the REPL to verify
+assigned to the variable `isAdult`. Try this version out in [replit][] to verify
 that it works.
 
 **Advanced:** What is the ternary above doing? Basically, it's saying: "when the
@@ -136,9 +132,13 @@ ageMessage;
 //=> "Congratulations! You're an adult!"
 ```
 
-> **Top Tip:** Be careful to not overuse the ternary expression. It's fine for slimming down a simple `if...else`, but be conscious of how easy your code is
-to understand for an outsider. Remember, you generally write code once, but it gets read (by yourself and others) **far** more than once. The ternary is often
-more difficult to quickly interpret than a regular old `if...else`, so make sure the reduction in code is worth any potential reduction in readability.
+> **Top Tip:** Be careful not to overuse the ternary expression. It's fine for
+> slimming down a simple `if...else`, but be conscious of how easy your code is
+> to understand for an outsider. Remember, you generally write code once, but it
+> gets read (by yourself and others) **far** more than once. The ternary is
+> often more difficult to quickly interpret than a regular old `if...else`, so
+> make sure the reduction in code is worth any potential reduction in
+> readability.
 
 ### `else if`
 
@@ -157,7 +157,7 @@ age).
 
 Here's how we can handle that using `else if` clauses:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/SuburbanScentedAccounting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/SuburbanScentedAccounting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Any time you use an `if...else if` construction, **at most one code block will
 be executed**. As soon as one of the conditions returns a truthy value, the
@@ -166,8 +166,8 @@ above, we have not included an `else` statement so, if none of the conditions is
 truthy, no code blocks will be run. If we had included an `else` clause, exactly
 one code block would be run.
 
-Try different values for `age` in the REPL and check the resulting values of the
-four variables.
+Try different values for `age` in [replit][] and check the resulting values of
+the four variables.
 
 ### Nested `if` Statements
 
@@ -176,7 +176,7 @@ of the four variables appear in more than one of the conditions. In this
 circumstance, we can streamline our code a bit by using nested conditional
 statements:
 
-<iframe height="400px" width="100%" src="https://repl.it/@LizBurton/MutedUntrueAdware?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/MutedUntrueAdware?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The first `if` condition checks for the "base level" of adulthood (`age >= 16`),
 and each subsequent nested `if` "adds on." Note that each inner `if` statement
@@ -208,3 +208,5 @@ create conditional code: the `switch` statement.
 * MDN
   * [Conditional statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
   * [`if...else` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+
+[replit]: https://replit.com/languages/javascript
