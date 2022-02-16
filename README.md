@@ -62,9 +62,9 @@ truthy value:
 
 In the code above, age is initialized to 30, so the condition (`age >= 18`)
 resolves to `true`. The code in the code block executes, setting the `isAdult`
-variable to `true`. Open [replit][] and try making some changes (e.g., assigning
-different values to `age`; changing the conditional statement) to see what
-happens.
+variable to `true`. Copy/paste the code above into [replit][] and try making
+some changes (e.g., assigning different values to `age`; changing the
+conditional statement) to see what happens.
 
 ### `else`
 
