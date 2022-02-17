@@ -38,9 +38,9 @@ from the ones you've seen in previous lessons. They include both a code window
 on the top, and the console window on the bottom. Code is pre-written in the
 code window so you just need to click the "Run" button to see what it does.
 
-However, if you want to experiment with any of the code (which we strongly
-recommend), you'll need to open [replit][] in the browser and copy/paste the
-code there.
+Note, however, that if you want to experiment with any of the code (which we
+strongly recommend), you'll need to open [replit][] in the browser and
+copy/paste the code there.
 
 ## Learn to Use the `if` Statement
 
