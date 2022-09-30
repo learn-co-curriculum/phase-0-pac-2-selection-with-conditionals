@@ -58,7 +58,7 @@ block_): one or more JavaScript expressions or statements enclosed in `{}`. The
 _code block_ contains the code we want to execute _if_ the condition returns a
 truthy value:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/FixedUnacceptableCable?lite=true&outputonly=0" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/FixedUnacceptableCable?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the code above, age is initialized to 30, so the condition (`age >= 18`)
 resolves to `true`. The code in the code block executes, setting the `isAdult`
