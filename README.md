@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-* Learn to use the `if` statement
+- Learn to use the `if` statement
 
 ## Introduction
 
@@ -17,12 +17,12 @@ learn more about **selection** statements, i.e., conditionals.
 **Conditional** statements enable us to execute code if a certain condition is
 true (or false). Some real-life examples might look like:
 
-* `if` hungry → make a meal.
-  * `else` → don't make a meal.
-* `if` light is green → press gas pedal.
-  * `else` → press brake pedal.
-* `if` it's the first of the month → pay the bill.
-  * `else` → don't pay the bill.
+- `if` hungry → make a meal.
+  - `else` → don't make a meal.
+- `if` light is green → press gas pedal.
+  - `else` → press brake pedal.
+- `if` it's the first of the month → pay the bill.
+  - `else` → don't pay the bill.
 
 You might also hear this referred to as **control flow** because it helps
 control the flow (i.e., sequence) of an application.
@@ -53,12 +53,12 @@ if (condition) {
 ```
 
 It consists of the `if` keyword followed by the condition to be checked in
-parentheses.  After that comes a _block statement_ (more commonly called a _code
+parentheses. After that comes a _block statement_ (more commonly called a _code
 block_): one or more JavaScript expressions or statements enclosed in `{}`. The
 _code block_ contains the code we want to execute _if_ the condition returns a
 truthy value:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/FixedUnacceptableCable?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/FixedUnacceptableCable?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 In the code above, age is initialized to 30, so the condition (`age >= 18`)
 resolves to `true`. The code in the code block executes, setting the `isAdult`
@@ -72,7 +72,7 @@ Often we want to run one block of code when the condition returns a `truthy`
 value and a _different_ block of code when it returns a `falsey` value. To do
 this, we use an `else` clause:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/CourteousEquatorialTree?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/CourteousEquatorialTree?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Note that the `else` clause **does not take a condition** — if the condition for
 the `if` returns a falsey value, we want the `else` code block to run **no
@@ -83,13 +83,13 @@ matter what**. This means that exactly one of the code blocks will _always_ run.
 Recall that this is the exact situation where we can use a ternary expression.
 Here's what the code above would look like using a ternary:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/EnchantedAchingProcedurallanguage?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/EnchantedAchingProcedurallanguage?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Here, we assign `isAdult` as `true` if the condition returns a truthy value and
 as `false` otherwise, exactly like the version using `if`.
 
-Remember that a ternary is an _expression_ — it returns a _value_. What
-this means is that we can simplify the code above a bit and assign the _result_ of
+Remember that a ternary is an _expression_ — it returns a _value_. What this
+means is that we can simplify the code above a bit and assign the _result_ of
 the ternary directly to a variable:
 
 ```js
@@ -108,9 +108,9 @@ that it works.
 conditional code returns `true`, return `true`, and when the conditional code
 returns `false`, return `false`." Sounds a bit redundant, doesn't it? When the
 return values are `true` and `false` as in the example above, you actually don't
-need to use a ternary — or an `if...else` — at all! This is because
-***the conditional is an expression as well***. The return value of `age >= 18`
-is a _Boolean value_ (`true` or `false`), so it can be assigned directly to our
+need to use a ternary — or an `if...else` — at all! This is because **_the
+conditional is an expression as well_**. The return value of `age >= 18` is a
+_Boolean value_ (`true` or `false`), so it can be assigned directly to our
 `isAdult` variable:
 
 ```js
@@ -126,7 +126,10 @@ something other than a Boolean:
 
 ```js
 const age = 20;
-const ageMessage = age >= 18 ? "Congratulations! You're an adult!" : "Enjoy your childhood while it lasts!";
+const ageMessage =
+  age >= 18
+    ? "Congratulations! You're an adult!"
+    : "Enjoy your childhood while it lasts!";
 
 ageMessage;
 //=> "Congratulations! You're an adult!"
@@ -157,7 +160,7 @@ age).
 
 Here's how we can handle that using `else if` clauses:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/SuburbanScentedAccounting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/SuburbanScentedAccounting?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Any time you use an `if...else if` construction, **at most one code block will
 be executed**. As soon as one of the conditions returns a truthy value, the
@@ -176,7 +179,7 @@ of the four variables appear in more than one of the conditions. In this
 circumstance, we can streamline our code a bit by using nested conditional
 statements:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/MutedUntrueAdware?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/MutedUntrueAdware?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The first `if` condition checks for the "base level" of adulthood (`age >= 16`),
 and each subsequent nested `if` "adds on." Note that each inner `if` statement
@@ -205,8 +208,8 @@ create conditional code: the `switch` statement.
 
 ## Resources
 
-* MDN
-  * [Conditional statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
-  * [`if...else` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- MDN
+  - [Conditional statements](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
+  - [`if...else` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 
 [replit]: https://replit.com/languages/javascript
