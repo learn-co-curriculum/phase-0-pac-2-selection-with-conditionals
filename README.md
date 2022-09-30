@@ -72,7 +72,7 @@ Often we want to run one block of code when the condition returns a `truthy`
 value and a _different_ block of code when it returns a `falsey` value. To do
 this, we use an `else` clause:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/CourteousEquatorialTree?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/CourteousEquatorialTree?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Note that the `else` clause **does not take a condition** — if the condition for
 the `if` returns a falsey value, we want the `else` code block to run **no
@@ -83,7 +83,7 @@ matter what**. This means that exactly one of the code blocks will _always_ run.
 Recall that this is the exact situation where we can use a ternary expression.
 Here's what the code above would look like using a ternary:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/EnchantedAchingProcedurallanguage?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/EnchantedAchingProcedurallanguage?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Here, we assign `isAdult` as `true` if the condition returns a truthy value and
 as `false` otherwise, exactly like the version using `if`.
@@ -160,7 +160,7 @@ age).
 
 Here's how we can handle that using `else if` clauses:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/SuburbanScentedAccounting?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/SuburbanScentedAccounting?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 Any time you use an `if...else if` construction, **at most one code block will
 be executed**. As soon as one of the conditions returns a truthy value, the
@@ -179,7 +179,7 @@ of the four variables appear in more than one of the conditions. In this
 circumstance, we can streamline our code a bit by using nested conditional
 statements:
 
-<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/MutedUntrueAdware?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="400px" width="100%" src="https://replit.com/@lizbur10/MutedUntrueAdware?lite=true#index.js" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 The first `if` condition checks for the "base level" of adulthood (`age >= 16`),
 and each subsequent nested `if` "adds on." Note that each inner `if` statement
